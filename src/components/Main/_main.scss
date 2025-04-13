@@ -1,0 +1,11 @@
+.main {
+    margin: 0 auto;
+    max-width: 1600px;
+    display: flex;
+
+    .mainscreen {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,144 @@
+.menu {
+    width: 300px;
+    height: 100%;
+    top: 0;
+    background-color: #d8d8d8;
+    z-index: 99;
+    position: fixed;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    visibility: hidden;
+
+
+    &.active {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    &__head {
+        background-color: #727171;
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        width: 280px;
+        position: relative;
+
+        &-logo {
+            padding-left: 20px;
+            width: 30px;
+            height: 30px;
+        }
+
+        &-language {
+            padding-left: 50px;
+
+
+            &-select {
+                padding-right: 10px;
+                outline: none;
+                border: none;
+                font-size: 17px;
+                cursor: pointer;
+                background-color: #727171;
+            }
+        }
+
+        &-close {
+            position: absolute;
+            right: 10px;
+
+            img {
+                display: block;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__list {
+        padding: 20px;
+        list-style-type: none;
+    }
+
+    &__link {
+        padding-bottom: 10px;
+        display: flex;
+        column-gap: 20px;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            color: chocolate;
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        &-cart {
+            text-align: center;
+            display: block;
+            width: 14px;
+            height: 18px;
+            position: relative;
+            top: -11px;
+            left: -110px;
+            background-color: #1c0080;
+            border-radius: 8px;
+            padding: 3px;
+            font-size: 14px;
+        }
+    }
+
+    &__currency {
+        padding-left: 20px;
+        padding-bottom: 15px;
+        display: flex;
+        column-gap: 10px;
+
+        ul {
+            list-style-type: none;
+        }
+
+        &-info {
+            display: flex;
+            column-gap: 5px;
+        }
+    }
+
+    &__social,
+    &__apps {
+        padding-left: 20px;
+    }
+
+    &__apps {
+        padding-top: 20px;
+    }
+
+    &__social-links,
+    &__apps-links {
+        padding-top: 10px;
+        width: 150px;
+        display: flex;
+        gap: 20px;
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    &_social-links img:hover,
+    &__apps-links img:hover {
+        transform: scale(1.2);
+    }
+
+    &__adress {
+        display: flex;
+        padding-top: 20px;
+        padding-left: 20px;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,133 @@
+.request {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    padding: 15px;
+    background-color: #FFE4B5;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    top: 50%;
+    left: 100%;
+    opacity: 0;
+
+    &.active {
+        animation: slideIn 0.5s ease-in-out forwards;
+    }
+
+    &.closing {
+        animation: slideOut 0.5s ease-in-out forwards;
+    }
+
+    @keyframes slideIn {
+        from {
+            left: 100%;
+            opacity: 0;
+            transform: translate(0%, -50%);
+        }
+
+        to {
+            left: 50%;
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @keyframes slideOut {
+        from {
+            left: 50%;
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        to {
+            left: 100%;
+            opacity: 0;
+            transform: translate(0, -50%);
+        }
+    }
+
+
+    &__close,
+    .formsend__close {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__title {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    &__email,
+    &__name {
+        &-title {
+            padding-bottom: 5px;
+        }
+
+        &-input {
+            width: 200px;
+            border-radius: 6px;
+            padding: 5px;
+            border: none;
+            margin-bottom: 5px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &__text {
+        &-title {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        &-input {
+            resize: none;
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 4px;
+
+            &:focus {
+                outline: none;
+                border-color: #64B5F6;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 10px;
+        width: 213px;
+        height: 30px;
+        border-radius: 8px;
+        background-color: #64B5F6;
+        color: #fff;
+        transition: background-color 0.3s ease;
+        font-size: 16px;
+        border-color: #42A5F5;
+
+        &:hover {
+            background-color: #3a80b9;
+        }
+    }
+
+    .formsend {
+        text-align: center;
+    }
+
+}

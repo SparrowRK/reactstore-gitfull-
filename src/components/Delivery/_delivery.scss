@@ -1,0 +1,61 @@
+.delivery {
+    position: relative;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    &__descr {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        padding: 0 10px;
+        transition: opacity 0.3s ease-in-out 0.8s, padding 0.3s ease-in-out 0.8s;
+
+        &.active {
+            opacity: 1;
+            padding: 10px;
+            animation: slideDown 0.8s ease-in-out forwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                max-height: 0;
+            }
+
+            to {
+                max-height: 1100px;
+            }
+        }
+    }
+
+    &__btn {
+        width: 150px;
+        height: 30px;
+        border-radius: 6px;
+        border: none;
+
+        &:hover {
+            background-color: #d1cdcd;
+
+        }
+    }
+
+    &__question {
+        padding-top: 20px;
+        font-weight: 600;
+        color: rgb(221, 131, 131);
+    }
+
+    &__contacts {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        font-weight: 600;
+
+        a {
+            font-weight: normal;
+        }
+    }
+}

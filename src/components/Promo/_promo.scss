@@ -1,0 +1,98 @@
+.promo {
+    padding: 15px;
+
+
+    &__descr {
+        img {
+            display: block;
+            margin: auto;
+            width: 800px;
+            max-height: 300px;
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, 220px);
+        padding-bottom: 20px;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5px;
+
+
+        &-item {
+            border: 1px solid rgb(202, 199, 199);
+            border-radius: 6px;
+            padding: 15px;
+
+            &:hover {
+                transform: scale(1.03);
+                box-shadow: 2px 2px 5px rgb(158, 158, 158);
+                background-color: #ffff;
+            }
+
+            &-img {
+                width: 150px;
+                height: 150px;
+                object-fit: contain;
+                cursor: pointer;
+            }
+
+            &-name {
+                cursor: pointer;
+            }
+
+            &-descr {
+                cursor: pointer;
+            }
+
+            &-status {
+                color: cadetblue;
+            }
+
+            &-buy {
+                padding-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &-price {
+                font-size: 20px;
+            }
+
+            &-cart {
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #c9c6c6;
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        width: 350px;
+        padding: 5px;
+        margin: 0 auto;
+        border: 1px solid rgb(187, 187, 187);
+        border-radius: 8px;
+        background-color: #b32531;
+        cursor: pointer;
+        font-size: 16px;
+
+        a {
+            color: rgb(238, 238, 238);
+        }
+    }
+}

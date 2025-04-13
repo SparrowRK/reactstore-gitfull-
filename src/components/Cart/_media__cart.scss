@@ -1,0 +1,140 @@
+@media (max-width:992px) {
+    body {
+        .cart {
+            width: 680px;
+
+            &__menu-item {
+                width: 650px;
+            }
+
+            &__item-name {
+                width: 400px;
+            }
+
+            &__divider1,
+            &__divider2 {
+                width: 640px;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    body {
+        .cart {
+            width: 500px;
+
+            &__head {
+                padding-bottom: 5px;
+
+                &-title {
+                    font-size: 18px;
+                }
+            }
+
+            &__menu-item {
+                width: 450px;
+            }
+
+            &__item-name {
+                width: 300px;
+            }
+
+            &__divider1 {
+                width: 440px;
+            }
+
+            &__divider2 {
+                width: 460px;
+            }
+
+            .cartempty-img {
+                width: 150px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            &__confirm {
+                &-exit {
+                    width: 150px;
+                    height: 30px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    body {
+        .cart {
+            width: 300px;
+
+            &__menu {
+                padding: 8px;
+            }
+
+            &__menu-head {
+                align-items: center;
+            }
+
+            &__menu-clear {
+                width: 90px;
+                height: 35px;
+                margin-right: 10px;
+                font-size: 13px;
+                line-height: 15px;
+            }
+
+            &__menu-item {
+                display: flex;
+                flex-direction: column;
+                width: 280px;
+            }
+
+            &__item-name {
+                width: 150px;
+                padding-left: 5px;
+                font-size: 13px;
+                text-align: center;
+            }
+
+            &__value {
+                padding-left: 30px;
+            }
+
+            &__item-remove {
+                right: 0px;
+            }
+
+            &__currency {
+                padding: 25px 11px 10px 0px;
+            }
+
+            &__divider1 {
+                width: 260px;
+            }
+
+            &__divider2 {
+                margin-top: 5px;
+                width: 280px;
+            }
+
+            &__confirm {
+                flex-direction: column-reverse;
+                row-gap: 10px;
+                padding-bottom: 0px;
+            }
+
+            &__confirm-total {
+                padding: 5px;
+                max-width: 300px;
+            }
+
+            &__confirm-exit {
+                margin-top: 5px;
+                height: 30px;
+            }
+        }
+    }
+}

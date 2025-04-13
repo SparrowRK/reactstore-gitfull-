@@ -1,0 +1,106 @@
+.item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__wrapper {
+        display: flex;
+        gap: 70px;
+    }
+
+    &__visual {
+
+        &-img {
+            width: 500px;
+            height: 300px;
+            object-fit: contain;
+        }
+
+        &-photos {
+            padding-top: 20px;
+            width: 400px;
+            height: 100px;
+            display: flex;
+            column-gap: 15px;
+            margin: auto;
+
+            img {
+                width: 130px;
+                height: 80px;
+                object-fit: contain;
+                cursor: pointer;
+            }
+        }
+
+        &-promo {
+            &-img {
+                padding-top: 20px;
+                width: 500px;
+                height: 200px;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &__info {
+
+        &-main {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            padding: 15px;
+        }
+
+        &-status {
+            color: green;
+        }
+
+        &-checkout {
+            align-items: center;
+            padding-left: 20px;
+            margin-top: 20px;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            border: 1px solid black;
+            border-color: #bbd44c;
+            border-radius: 8px;
+            padding: 15px;
+
+            &-price {
+                font-size: 24px;
+            }
+
+            &-cart {
+                display: flex;
+                align-items: center;
+                border-radius: 8px;
+                border: none;
+                background-color: #a3c51b;
+                color: #ffff;
+                font-size: 16px;
+                padding: 7px;
+
+                &:hover {
+                    background-color: #bbd44c;
+                }
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        &-descr {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            border: 1px solid rgb(175, 175, 175);
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+    }
+}

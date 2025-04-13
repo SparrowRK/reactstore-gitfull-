@@ -1,0 +1,12 @@
+@media (max-width:576px) {
+    .request {
+        &.active {
+            width: 300px;
+            padding: 7px;
+        }
+
+        .request__title {
+            width: 260px;
+        }
+    }
+}

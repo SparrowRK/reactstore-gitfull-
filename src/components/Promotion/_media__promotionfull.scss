@@ -1,0 +1,129 @@
+@media (max-width:1300px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width:1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .promotionfull {
+        &__list {
+            grid-template-columns: repeat(5, 192px);
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .promotionfull {
+        &__list {
+            grid-template-columns: repeat(4, 180px);
+
+            &-item {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .promotionfull {
+        &__list {
+            grid-template-columns: repeat(3, 180px);
+        }
+    }
+}
+
+@media(max-width:600px) {
+    .promotionfull {
+        .promotion__timer {
+            width: 360px;
+
+            &-day,
+            &-hour,
+            &-minute {
+                width: 80px;
+
+                p {
+                    font-size: 20px;
+                }
+
+                .time__divider {
+                    width: 80px;
+                    height: 1px;
+                }
+            }
+
+            &-days,
+            &-hours,
+            &-minutes {
+                font-size: 45px;
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .promotionfull {
+        &__list {
+            grid-template-columns: repeat(2, 155px);
+
+            &-item {
+                padding: 5px;
+
+                &-status,
+                &-buy {
+                    padding: 5px;
+                    font-size: 14px;
+                }
+
+                &-img {
+                    width: 120px;
+                    height: 120px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &__link {
+            width: 220px;
+        }
+    }
+}
+
+@media(max-width:445px) {
+    .promotionfull {
+        .promotion__timer {
+            width: 280px;
+
+            &-day,
+            &-hour,
+            &-minute {
+                width: 70px;
+
+                p {
+                    font-size: 18px;
+                }
+
+                .time__divider {
+                    width: 70px;
+                    height: 1px;
+                }
+            }
+        }
+    }
+}

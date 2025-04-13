@@ -1,0 +1,219 @@
+.filters {
+    position: sticky;
+    top: 70px;
+    width: 280px;
+    max-height: calc(100vh - 70px);
+    align-self: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &__wrapper {
+        border-right: 1px solid #ccc;
+        width: 220px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+
+    &__category,
+    &__price,
+    &__country,
+    &__color {
+        &-head {
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 180px;
+        }
+
+        &-title {
+            cursor: pointer;
+            user-select: none;
+
+            &:hover {
+                color: aqua;
+            }
+        }
+
+        &-body.active {
+            display: none;
+        }
+
+        &-list {
+            list-style-type: none;
+
+            li {
+                font-size: 17px;
+                padding-bottom: 3px;
+
+                &:hover {
+                    color: aqua;
+                }
+            }
+
+            label {
+                user-select: none;
+                cursor: pointer;
+            }
+
+            input {
+                transform: scale(1.2);
+                margin-right: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__price {
+        padding-top: 10px;
+        user-select: none;
+        width: 190px;
+
+        &-inputleft,
+        &-inputright {
+            border-radius: 8px;
+            padding: 4px;
+            border: 1px solid black;
+            text-align: center;
+            height: 15px;
+            width: 45px;
+            border-radius: 6px;
+            margin-right: 10px;
+
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &-inputright {
+            margin-left: 10px;
+        }
+
+        &-btn {
+            margin-left: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+            border: none;
+
+            &:hover {
+                background-color: #cfcbcb;
+            }
+        }
+
+        &-slider {
+            margin-top: 10px;
+            position: relative;
+            width: 170px;
+            height: 10px;
+            background: #ddd;
+            border-radius: 5px;
+
+            .slider-left,
+            .slider-right {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 10px;
+                background: none;
+                -webkit-appearance: none;
+                appearance: none;
+                pointer-events: none;
+                margin: 0;
+            }
+
+            .slider-left {
+                width: 132px;
+                left: 10px;
+            }
+
+            .slider-right {
+                width: 132px;
+                right: 10px;
+            }
+
+            /* Стили для ползунков */
+            .slider-left::-webkit-slider-thumb,
+            .slider-right::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background: #4CAF50;
+                cursor: pointer;
+                pointer-events: auto;
+                margin-top: -2px;
+            }
+
+            input[type="range"]::-webkit-slider-runnable-track {
+                height: 10px;
+                background: transparent;
+            }
+        }
+    }
+
+    &__available {
+        display: flex;
+        padding-top: 10px;
+        column-gap: 20px;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover {
+            color: aqua;
+        }
+    }
+
+    input {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+
+
+    &__country {
+        padding-bottom: 15px;
+    }
+
+    &__confirm {
+        &-btn {
+            display: none;
+            border-radius: 10px;
+            background-color: aqua;
+            width: 130px;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid rgb(199, 198, 198);
+
+            &:hover {
+                background-color: rgb(128, 226, 226);
+            }
+        }
+    }
+
+    .arrow {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        transform-origin: center center;
+    }
+
+    .arrow.active {
+        transform: rotate(180deg);
+    }
+
+    &__divider {
+        width: 200px;
+        height: 1px;
+        background-color: black;
+        margin-top: 10px;
+    }
+}

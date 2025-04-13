@@ -1,0 +1,124 @@
+.items {
+    border-radius: 10px;
+    padding-bottom: 20px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%
+    }
+
+    &__info {
+        padding: 10px 25px;
+        display: flex;
+        align-items: center;
+
+        &-smallvh {
+            display: contents;
+        }
+
+        &-addfilters {
+            display: none;
+
+        }
+
+        &-filtersremove {
+            margin-left: 20px;
+            padding: 5px;
+            border-radius: 6px;
+            border: 1px solid rgb(146, 146, 146);
+
+            &:hover {
+                background-color: #dddcdc;
+            }
+        }
+
+        &-priceswitch {
+            margin-left: auto;
+            border-radius: 8px;
+            padding: 5px;
+            cursor: pointer;
+
+            &:focus {
+                border-color: aqua;
+            }
+        }
+
+        select:focus {
+            border-color: aqua;
+            outline: none;
+        }
+    }
+
+    &__list {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(5, 212px);
+
+
+        &-item {
+            border: 1px solid rgb(202, 199, 199);
+            border-radius: 6px;
+            padding: 15px;
+
+            &:hover {
+                transform: scale(1.03);
+                box-shadow: 2px 2px 5px rgb(158, 158, 158);
+                background-color: #ffff;
+            }
+
+            &-img {
+                width: 150px;
+                height: 150px;
+                object-fit: contain;
+                cursor: pointer;
+            }
+
+            &-descr {
+                cursor: pointer;
+            }
+
+            &-status {
+                color: cadetblue;
+            }
+
+            &-buy {
+                padding-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &-price {
+                font-size: 20px;
+            }
+
+            &-cart {
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #c9c6c6;
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
+
+    &__addbtn {
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 140px;
+        padding: 8px;
+        border-radius: 8px;
+        background-color: #b8ce62;
+        color: #ffff;
+        border: none;
+        font-size: 15px;
+
+        &:hover {
+            background-color: #d3ee5c;
+        }
+    }
+}

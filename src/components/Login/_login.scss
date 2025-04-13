@@ -1,0 +1,92 @@
+.login {
+    width: 280px;
+    height: 320px;
+    background-color: #FFE4B5;
+    border-radius: 10px;
+    z-index: 99;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: all 0.5s ease;
+    opacity: 0;
+    display: none;
+
+    &.active {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        display: block;
+    }
+
+    &__close {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    &__form {
+        padding: 10px 0 0 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__title {
+        padding-bottom: 10px;
+    }
+
+    &__email,
+    &__password {
+        &-title {
+            padding-bottom: 5px;
+        }
+
+        &-input {
+            width: 200px;
+            border-radius: 6px;
+            padding: 5px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &-toggle {
+            position: relative;
+            right: 30px;
+            cursor: pointer;
+        }
+    }
+
+    &__btn {
+        margin-top: 10px;
+        width: 213px;
+        height: 30px;
+        border-radius: 8px;
+        color: #fff;
+        transition: background-color 0.3s ease;
+        font-size: 16px;
+        border-color: #42A5F5;
+        background-color: #64B5F6;
+
+        &:hover {
+            background-color: #42A5F5;
+        }
+    }
+
+    &__ask {
+        padding: 25px 0 5px 0;
+    }
+
+    &__register {
+        color: #42A5F5;
+        padding-bottom: 10px;
+        border: none;
+        background-color: #FFE4B5;
+        font-size: 16px;
+    }
+}

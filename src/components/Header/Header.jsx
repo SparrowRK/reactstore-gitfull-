@@ -28,7 +28,7 @@ const Header = ({ setonMenu, setonCart, setLog, upLink, currency, setfullDell, s
         if (search.trim() === '') return;
 
         setCurrentSearchTerm(search.toLowerCase());
-        navigate('/');
+        navigate('/Store/');
     };
 
     return (

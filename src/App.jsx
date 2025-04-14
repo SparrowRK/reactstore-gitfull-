@@ -119,18 +119,6 @@ const App = () => {
 
   const currency = { usd: 42, eur: 46 };
 
-  window.addEventListener(
-    'error',
-    function (event) {
-      if (event.target.tagName === 'IMG') {
-        console.error(
-          `%c⛔ Не удалось загрузить изображение:\n${event.target.src}`,
-          'color: red; font-weight: bold;'
-        );
-      }
-    },
-    true // важно! чтобы поймать "каптуринг" ошибок
-  );
 
   return (
     <>

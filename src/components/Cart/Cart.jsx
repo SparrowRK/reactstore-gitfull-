@@ -14,19 +14,40 @@ const Cart = ({ onCart, setonCart, toCart, addToCart, currency }) => {
 
     let cart = toCart;
 
-    const [quantity, setQuantity] = useState({});
+    const [quantity, setQuantity] = useState(() => {
+        const savedQuantity = localStorage.getItem('cartQuantity');
+        return savedQuantity ? JSON.parse(savedQuantity) : {};
+    });
+
 
     useEffect(() => {
         setQuantity((prevQuant) => {
             const newQuant = { ...prevQuant };
+
             cart.forEach(item => {
+
                 if (!newQuant[item.id]) {
                     newQuant[item.id] = 1;
                 }
             });
+
+            Object.keys(newQuant).forEach(itemId => {
+                if (!cart.some(item => item.id === parseInt(itemId) || item.id === itemId)) {
+                    delete newQuant[itemId];
+                }
+            });
+
             return newQuant;
         });
     }, [cart]);
+
+    useEffect(() => {
+        if (Object.keys(quantity).length > 0) {
+            localStorage.setItem('cartQuantity', JSON.stringify(quantity));
+        } else {
+            localStorage.removeItem('cartQuantity');
+        }
+    }, [quantity]);
 
 
     const plusQuantity = (itemId) => {
@@ -48,7 +69,6 @@ const Cart = ({ onCart, setonCart, toCart, addToCart, currency }) => {
             return newQuant;
         });
     };
-
 
 
     const removeFromCart = (itemId) => {
@@ -80,7 +100,7 @@ const Cart = ({ onCart, setonCart, toCart, addToCart, currency }) => {
         if (currencyType === "USD") {
             setCurrencyType("initial");
         } else {
-            const fullpriceUsd = fullPriceOfCart * currency.usd + "$";
+            const fullpriceUsd = (fullPriceOfCart / currency.usd).toFixed(2) + "$";
             setConvertedFullPrice(fullpriceUsd);
             setCurrencyType("USD");
         }
@@ -90,7 +110,7 @@ const Cart = ({ onCart, setonCart, toCart, addToCart, currency }) => {
         if (currencyType === "EUR") {
             setCurrencyType("initial");
         } else {
-            const fullpriceEur = fullPriceOfCart * currency.eur + "€";
+            const fullpriceEur = (fullPriceOfCart / currency.eur).toFixed(2) + "€";
             setConvertedFullPrice(fullpriceEur);
             setCurrencyType("EUR");
         }

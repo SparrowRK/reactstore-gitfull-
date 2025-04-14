@@ -53,7 +53,7 @@ const Footer = ({ setForm, upLink, setfullDell, setfullDescr }) => {
                             <li><a href="">+00 000 0000 00 00</a></li>
                             <li><a href="">MyStore@gmail.com</a></li>
                             <li>
-                                <p>{t("officeF")} Example str,10</p>
+                                <p>Example str,10</p>
                             </li>
                         </ul>
                     </div>

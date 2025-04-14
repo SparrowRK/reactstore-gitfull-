@@ -38,7 +38,7 @@ const Menu = ({ onMenu, setonMenu, setonCart, setLog, upLink, setfullDescr, setf
             <div className="menu__wrapper">
                 <div className="menu__head">
 
-                    <img className="menu__head-logo" src="img/mainlogo.png" alt="Mainlogo" />
+                    <img className="menu__head-logo" src="/Store/img/mainlogo.png" alt="Mainlogo" />
 
                     <div className="menu__head-language">
                         <select
@@ -53,7 +53,7 @@ const Menu = ({ onMenu, setonMenu, setonCart, setLog, upLink, setfullDescr, setf
                     </div>
 
                     <div className="menu__head-close" onClick={() => setonMenu(false)}>
-                        <img src="img/icons/close.svg" alt="close" />
+                        <img src="/Store/img/icons/close.svg" alt="close" />
                     </div>
 
                 </div>
@@ -62,11 +62,11 @@ const Menu = ({ onMenu, setonMenu, setonCart, setLog, upLink, setfullDescr, setf
                     <ul className="menu__list">
 
                         <li><div className="menu__link" onClick={openLogin}>
-                            <img src="img/icons/enter.svg" alt="Enter" />{t('enter')}</div>
+                            <img src="/Store/img/icons/enter.svg" alt="Enter" />{t('enter')}</div>
                         </li>
 
-                        <li onClick={(e) => { e.preventDefault(); upLink(setonMenu) }}><Link className="menu__link" to="/promos" >
-                            <img src="img/icons/promo.svg" alt="Promos" />{t("promoBtn")}</Link>
+                        <li onClick={(e) => { e.preventDefault(); upLink(setonMenu) }}><Link className="menu__link" to="/Store/promos" >
+                            <img src="/Store/img/icons/promo.svg" alt="Promos" />{t("promoBtn")}</Link>
                         </li>
 
                         <li>

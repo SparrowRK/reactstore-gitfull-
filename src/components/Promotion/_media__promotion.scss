@@ -38,9 +38,6 @@
             width: 275px;
         }
 
-        &__conditions-link {
-            width: 275px;
-        }
 
         &__timer {
             width: 265px;
@@ -79,6 +76,10 @@
             display: grid;
             grid-template-columns: 1fr;
             place-items: center;
+        }
+
+        &__descr {
+            width: 310px;
         }
 
         &__timer {

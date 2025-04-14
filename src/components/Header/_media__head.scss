@@ -161,7 +161,7 @@
             }
 
             &-input {
-                width: 170px;
+                width: clamp(170px, 53vw, 320px);
                 padding: 6px 20px;
             }
 
@@ -180,12 +180,14 @@
         &__cart {
             width: 25px;
             height: 25px;
+            margin-left: 8px;
 
             &-count {
                 top: -37px;
                 left: 14px;
-                font-size: 13px;
-                width: 12px;
+                font-size: 14px;
+                font-weight: 500;
+                width: 15px;
                 padding: 2px;
             }
         }

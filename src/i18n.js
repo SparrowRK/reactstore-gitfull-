@@ -64,7 +64,6 @@ i18n.use(initReactI18next).init({
                 // футер
                 companyF: "Компания",
                 contactsF: "Контакты",
-                officeF: "Офис магазина ",
                 request: "Мы только открылись, помогите нам стать лучше",
                 requestBtn: "Заполнить форму",
 
@@ -219,7 +218,6 @@ i18n.use(initReactI18next).init({
 
                 companyF: "Company",
                 contactsF: "Contacts",
-                officeF: "Store Office",
                 request: "We’ve just opened — help us get better!",
                 requestBtn: "Fill form",
 
@@ -373,7 +371,6 @@ i18n.use(initReactI18next).init({
 
                 companyF: "Компанія",
                 contactsF: "Контакти",
-                officeF: "Офіс магазину",
                 request: "Ми щойно відкрились, допоможіть нам стати кращими!",
                 requestBtn: "Заповнити форму",
 

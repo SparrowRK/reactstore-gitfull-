@@ -15,7 +15,11 @@ const Reminder = ({ upLink }) => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 800 && !isClosed) {
+            const windowWidth = window.innerWidth;
+            // Устанавливаем разные пороги для разных разрешений
+            const scrollThreshold = windowWidth <= 576 ? 2100 : 800;
+
+            if (window.scrollY > scrollThreshold && !isClosed) {
                 setReminder(true);
             } else {
                 setReminder(false);

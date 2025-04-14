@@ -1,7 +1,7 @@
 .head {
     top: 0px;
     position: sticky;
-    background-color: #FFAA77;
+    background-color: #ee9056;
     z-index: 97;
 
     .container {
@@ -167,7 +167,7 @@
 
         &-options {
             outline: none;
-            background-color: #FFAA77;
+            background-color: #ee9056;
             border: none;
             font-size: 17px;
             cursor: pointer;
@@ -178,15 +178,17 @@
     &__cart-count {
         text-align: center;
         display: block;
-        width: 14px;
+        width: 16px;
         height: 18px;
         position: relative;
         top: -45px;
         left: 20px;
-        background-color: #1c0080;
+        background-color: #8469e4;
+        opacity: 0.9;
         border-radius: 8px;
         padding: 3px;
         font-size: 14px;
+        color: rgb(14, 8, 8);
     }
 
 }

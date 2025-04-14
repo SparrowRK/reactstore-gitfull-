@@ -62,3 +62,20 @@
         left: 5px;
     }
 }
+
+@media (max-width:800px) {
+    .slider {
+
+        .arrowprev,
+        .arrownext {
+            width: 45px;
+            height: 60px;
+
+            &:hover {
+                background-color: transparent;
+            }
+
+        }
+    }
+
+}

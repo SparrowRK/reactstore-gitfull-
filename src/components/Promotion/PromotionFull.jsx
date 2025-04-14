@@ -44,7 +44,7 @@ const PromotionFull = ({ products, addToCart }) => {
                                             <img className="promotionfull__list-item-img" src={product.pic} alt="Tv" onClick={() => navigate(`/Store/${product.id}`)} />
                                             <h4 className="promotionfull__list-item-name" onClick={() => navigate(`/Store/${product.id}`)} >{product.name}</h4>
 
-                                            <div className="promo__list-item-status"
+                                            <div className="promotionfull__list-item-status"
                                                 style={{ color: product.status === "Есть" ? "blue" : "grey" }}>
                                                 {product.status === "Есть" ? t("available") : t("notAvalaible")}
                                             </div>
@@ -52,7 +52,7 @@ const PromotionFull = ({ products, addToCart }) => {
                                             <div className="promotionfull__list-item-buy">
                                                 <div className="promotionfull__list-item-price">{product.price}</div>
                                                 {product.status === "Есть" &&
-                                                    (<img className="promo__list-item-cart" src="img/icons/cart.svg" alt="Cart" onClick={() =>
+                                                    (<img className="promotionfull__list-item-cart" src="img/icons/cart.svg" alt="Cart" onClick={() =>
                                                         addToCart(prev => {
                                                             if (prev.find(cartItem => cartItem.id === product.id)) return prev;
                                                             return [...prev, product];

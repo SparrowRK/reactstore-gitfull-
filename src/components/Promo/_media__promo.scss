@@ -73,16 +73,22 @@
 
         &__list {
             grid-template-columns: repeat(2, 155px);
+            column-gap: 8px;
         }
 
         &__list-item {
-            padding: 0px;
+            padding: 8px;
+        }
+
+        &__list-item-img {
+            height: 120px;
+            width: 120px;
         }
 
         &__list-item-name,
         &__list-item-status,
         &__list-item-buy {
-            padding: 0px 8px 5px 8px;
+            padding: 0px 0px 5px 4px;
         }
     }
 }

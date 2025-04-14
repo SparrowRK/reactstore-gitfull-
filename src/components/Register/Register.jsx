@@ -39,18 +39,16 @@ const Register = ({ onReg, setReg, setLog }) => {
                 <h2 className="register__title">{t('register')}</h2>
 
                 <label className="register__email-title" htmlFor="registeruseremail">{t('emailR')}</label>
-                <input className="register__email-input" type="email" id="registeruseremail" name="email" required autoFocus={onReg} autoComplete="useremail" />
+                <input className="register__email-input" type="email" id="registeruseremail" name="email" required autoFocus={onReg} autoComplete="off" />
 
                 <label className="register__number-title" htmlFor="registerusernumber">{t('phoneR')}</label>
-                <input className="register__number-input" type="tel" id="registerusernumber" name="number" required autoComplete="tel" />
+                <input className="register__number-input" type="tel" id="registerusernumber" name="number" required autoComplete="off" />
 
                 <div className="register__password">
                     <label className="register__password-title" htmlFor="registeruserpassword" >{t('passwordR')}</label>
                     <input className="register__password-input" type={showPass ? 'text' : 'password'}
                         value={pass} id="registeruserpassword" name="password" required
-                        minLength="6" onChange={noSpaces} />
-                    {/* autoComplete="new-password"  */}
-
+                        minLength="6" onChange={noSpaces} autoComplete="off" />
                     {pass && (
                         <span className="register__password-toggle" id="togglePassword" onClick={togglePass}>{showPass ? "👁️" : "🙈"}</span>
                     )}

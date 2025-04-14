@@ -4,8 +4,6 @@ import { useTranslation } from 'react-i18next';
 
 const Timer = () => {
     const { t } = useTranslation();
-    const [timeRemaining, setTimeRemaining] = useState({ days: 0, hours: 0, minutes: 0 });
-
 
     const calculateTimeRemaining = () => {
         const endTime = new Date("2025-05-10T23:59:59");
@@ -18,17 +16,16 @@ const Timer = () => {
             const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
             const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-
-            setTimeRemaining({ days, hours, minutes });
+            return { days, hours, minutes };
         }
     };
 
+    const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining);
+
+
     useEffect(() => {
-
-        calculateTimeRemaining();
-
         const interval = setInterval(() => {
-            calculateTimeRemaining();
+            setTimeRemaining(calculateTimeRemaining());
         }, 1000);
 
         return () => clearInterval(interval);

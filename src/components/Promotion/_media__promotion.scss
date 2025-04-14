@@ -73,13 +73,14 @@
     .promotion {
 
         &__wrapper {
+            padding: 2px;
             display: grid;
             grid-template-columns: 1fr;
             place-items: center;
         }
 
         &__descr {
-            width: 310px;
+            width: 313px;
         }
 
         &__timer {

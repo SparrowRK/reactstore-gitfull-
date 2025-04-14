@@ -81,15 +81,11 @@
     .promotionfull {
         &__list {
             grid-template-columns: repeat(2, 155px);
+            column-gap: 8px;
 
             &-item {
-                padding: 5px;
+                padding: 10px;
 
-                &-status,
-                &-buy {
-                    padding: 5px;
-                    font-size: 14px;
-                }
 
                 &-img {
                     width: 120px;

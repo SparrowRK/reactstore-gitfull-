@@ -34,9 +34,6 @@
             justify-content: center;
         }
 
-        &__descr {
-            width: 275px;
-        }
 
 
         &__timer {
@@ -73,15 +70,30 @@
     .promotion {
 
         &__wrapper {
-            padding: 2px;
+            padding: 5px;
             display: grid;
             grid-template-columns: 1fr;
             place-items: center;
         }
 
         &__descr {
-            width: 313px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
+        &__title {
+            width: 240px;
+        }
+
+        &__conditions {
+            width: 315px;
+        }
+
+        &__conditions-link {
+            width: 300px;
+        }
+
 
         &__timer {
             padding-top: 15px;

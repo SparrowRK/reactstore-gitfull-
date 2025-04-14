@@ -18,8 +18,8 @@ const Promotion = () => {
                 <div className="promotion__wrapper">
                     <div className="promotion__descr">
                         <h4 className="promotion__title">{t('promoST')}</h4>
-                        <p className="promotion__conditions">{t('promoSD')} <br /> {t('promoSD2')} </p>
-                        <p className="promotion__conditions-link">{t('promoSLT')} <Link to="/Store/special">{t('promoSL')}</Link></p>
+                        <p className="promotion__conditions">{t('promoSD')}<br />{t('promoSD2')}</p>
+                        <p className="promotion__conditions-link">{t('promoSLT')}<Link to="/Store/special">{t('promoSL')}</Link></p>
                     </div>
 
                     <Timer />

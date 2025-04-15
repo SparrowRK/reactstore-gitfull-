@@ -1,7 +1,7 @@
 .head {
     top: 0px;
     position: sticky;
-    background-color: #ee9056;
+    background-color: #ee9056 !important;
     z-index: 97;
 
     .container {
@@ -32,7 +32,7 @@
             display: block;
             width: 24px;
             height: 3px;
-            background-color: black;
+            background-color: black !important;
         }
     }
 
@@ -63,6 +63,7 @@
         &-input {
             width: 400px;
             padding: 8px 30px;
+            height: 20px;
             border-radius: 6px;
             border: none;
             outline: none;
@@ -75,9 +76,12 @@
             height: 36px;
             border-radius: 6px;
             z-index: 2;
-            right: 0;
+            right: -7px;
+            top: 0;
             background-color: #9ce7e4;
             border: none;
+            box-sizing: border-box;
+            color: black !important;
 
             &:hover {
                 background-color: #86cbe0;
@@ -95,7 +99,7 @@
         a {
             position: relative;
             text-decoration: none;
-            color: black;
+            color: black !important;
             z-index: 2;
             display: flex;
             justify-content: center;
@@ -167,11 +171,14 @@
 
         &-options {
             outline: none;
-            background-color: #ee9056;
-            border: none;
+            background-color: #ee9056 !important;
+            border-color: #ee9056;
             font-size: 17px;
             cursor: pointer;
             padding-right: 5px;
+            box-shadow: none;
+            border-style: solid;
+
         }
     }
 

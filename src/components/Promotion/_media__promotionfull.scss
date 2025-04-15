@@ -27,6 +27,11 @@
 
             &-item {
                 padding: 10px;
+
+                &:hover {
+                    transform: scale(1) !important;
+                    box-shadow: none;
+                }
             }
         }
     }

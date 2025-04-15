@@ -34,6 +34,13 @@
 
         &__list {
             grid-template-columns: repeat(4, 180px);
+
+            &-item {
+                &:hover {
+                    transform: scale(1) !important;
+                    box-shadow: none;
+                }
+            }
         }
     }
 }

@@ -32,7 +32,17 @@
             }
 
 
+            &__price {
+                &-slider {
+                    margin-top: 20px;
+                }
+            }
+
+
+
+
             &__divider {
+                margin-top: 20px;
                 width: 270px;
             }
 
@@ -68,9 +78,6 @@
                 }
             }
 
-            &__price-slider {
-                margin-left: 10px;
-            }
 
             &__divider {
                 width: 200px;
